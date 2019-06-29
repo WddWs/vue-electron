@@ -1,0 +1,38 @@
+{
+    "name": "vue-electron",
+    "version": "1.0.0",
+    "main": "main.js",
+    "scripts": {
+        "serve": "set NODE_ENV=development&& concurrently \"vue-cli-service serve\" \"electron .\"",
+        "build": "vue-cli-service build && electron-packager . myClient --win --out ../myClient --arch=x64 --app-version=0.0.1 --electron-version=5.0.4 --overwrite",
+        "pack": "electron-packager . myClient --win --out ../myClient --arch=x64 --app-version=0.0.1 --electron-version=5.0.4"
+    },
+    "keywords": [
+        "Electron",
+        "vue"
+    ],
+    "license": "CC0-1.0",
+    "devDependencies": {
+        "@vue/cli-plugin-babel": "^3.8.0",
+        "@vue/cli-service": "^3.8.0",
+        "concurrently": "^4.1.1",
+        "electron": "^5.0.2",
+        "node-sass": "^4.9.0",
+        "sass-loader": "^7.1.0",
+        "vue-template-compiler": "^2.6.10"
+    },
+    "dependencies": {
+        "core-js": "^2.6.5",
+        "vue": "^2.6.10",
+        "vue-router": "^3.0.3"
+    },
+    "postcss": {
+        "plugins": {
+            "autoprefixer": {}
+        }
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions"
+    ]
+}
