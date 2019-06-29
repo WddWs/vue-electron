@@ -4,8 +4,8 @@
     "main": "main.js",
     "scripts": {
         "serve": "set NODE_ENV=development&& concurrently \"vue-cli-service serve\" \"electron .\"",
-        "build": "vue-cli-service build && electron-packager . myClient --win --out ../myClient --arch=x64 --app-version=0.0.1 --electron-version=5.0.4 --overwrite",
-        "pack": "electron-packager . myClient --win --out ../myClient --arch=x64 --app-version=0.0.1 --electron-version=5.0.4"
+        "build": "vue-cli-service build && electron-packager . myClient --win --out ./myClient --arch=x64 --app-version=0.0.1 --electron-version=5.0.4 --overwrite",
+        "pack": "electron-packager . myClient --win --out ./myClient --arch=x64 --app-version=0.0.1 --electron-version=5.0.4"
     },
     "keywords": [
         "Electron",
@@ -23,6 +23,7 @@
     },
     "dependencies": {
         "core-js": "^2.6.5",
+        "electron-packager": "^14.0.0",
         "vue": "^2.6.10",
         "vue-router": "^3.0.3"
     },
